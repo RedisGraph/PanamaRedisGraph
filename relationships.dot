@@ -1,0 +1,18 @@
+digraph structs {
+    ranksep=1.25; 
+    
+    node[shape=Mrecord]
+
+    Entity [label="{<f0> Entity|<f1> id\nname\njurisdiction\njurisdiction_description\ncountry_codes\ncountries\nincorporation_date\ninactivation_date\nstruck_off_date\nclosed_date}", color=Blue];
+    Officer [label="{<f0> Officer|<f1> id\nname\ncountry_codes\ncountries}", color=Blue];
+    Intermediary [label="{<f0> Intermediary|<f1> id\nname\ncountry_codes\ncountries}", color=Blue];
+    Address [label="{<f0> Address|<f1> id\naddress\ncountry_codes\ncountries}", color=Blue];
+
+    Officer:f0 -> Entity:f0 [label=":OFFICER_OF", fontcolor=darkgreen, color=darkgreen]
+    Officer:f0 -> Intermediary:f0 [label=":OFFICER_OF", fontcolor=darkgreen, color=darkgreen]
+    Officer:f0 -> Officer:f0 [label=":OFFICER_OF", fontcolor=darkgreen, color=darkgreen]
+    Intermediary:f0 -> Entity:f0 [label=":INTERMEDIARY_OF", fontcolor=darkgreen, color=darkgreen]
+    Officer:f0 -> Address:f0 [label=":REGISTERED_ADDRESS", fontcolor=darkgreen, color=darkgreen]
+    Entity:f0 -> Address:f0 [label=":REGISTERED_ADDRESS", fontcolor=darkgreen, color=darkgreen]
+
+}
