@@ -27,6 +27,7 @@ create some full text searching for some fun
 
 ```
 GRAPH.QUERY PANAMA "CALL db.idx.fulltext.createNodeIndex('Address', 'address')"
+GRAPH.QUERY PANAMA "CALL db.idx.fulltext.createNodeIndex('Entity', 'name')"
 ```
 
 ![Relationships](./relationships.png "Relationships")
