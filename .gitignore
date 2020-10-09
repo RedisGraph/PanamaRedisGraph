@@ -1,3 +1,9 @@
-data_download/*.csv
-data_download/*.zip
+.vscode/*
+data_download/*
+db/*.log
+db/bulk_operation/*
+db/dropbox/*
+db/profiler_logs/*
+db/rsnaps/*
+db/redisinsight.log*
 DEV_NOTES
