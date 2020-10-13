@@ -51,6 +51,23 @@ Someone hiding deep
 MATCH (a:Officer)-[:OFFICER_OF]->(b:Officer)-[:OFFICER_OF]->(j) RETURN a, b, j
 ```
 
+## Variable Length Path Queries
+
+Find all other officers 1-3 hops deep from U2's manager
+
+```
+MATCH path=(a:Officer{name:'PAUL ARTHUR MCGUINNESS'})-[*..3]-(x:Officer) RETURN DISTINCT(path)
+
+```
+
+List top 10 Countries for all connections 1-4 hops deep from Zylann
+
+```
+MATCH (a:Officer{name: 'ZYLANN PROPERTIES LIMITED'})-[*..4]-(x:Entity) RETURN count(x.countries) as count, a.name
+MATCH (a:Officer{name: 'ZYLANN PROPERTIES LIMITED'})-[*..4]-(x:Entity) RETURN count(x.countries) as count, x.countries  ORDER BY count DESC LIMIT 10
+```
+
+
 ## Using Search with queries
 
 Finding all the Alpines
