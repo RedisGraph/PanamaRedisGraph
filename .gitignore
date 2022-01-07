@@ -7,3 +7,4 @@ db/profiler_logs/*
 db/rsnaps/*
 db/redisinsight.log*
 DEV_NOTES
+venv/*

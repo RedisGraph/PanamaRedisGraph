@@ -43,7 +43,7 @@ Download the zip file from above into the data_download diretory and unzip
 
 ```
 pip3 install git+https://github.com/RedisGraph/redisgraph-bulk-loader.git@master
-~/bin/redisgraph-bulk-loader PANAMA -n data_download/Officer.csv\
+~/bin/redisgraph-bulk-insert PANAMA -n data_download/Officer.csv\
  -n data_download/Entity.csv  -n data_download/Address.csv \
  -n data_download/Intermediary.csv  -r ./data_download/INTERMEDIARY_OF.csv \
  -r ./data_download/OFFICER_OF.csv -r ./data_download/REGISTERED_ADDRESS.csv
